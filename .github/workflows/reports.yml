@@ -20,10 +20,10 @@ jobs:
           sudo docker cp node_container:/node_project/results/ .
         
       - name: "Upload Artifact"
-        uses: actions/upload-artifact@v2-preview
+        uses: actions/upload-artifact@v2
         with:
           name: Transunion-Test-Customer-Report-Artifact
-          path: ./Output_report.csv
+          path: ./results/Output_report.csv
 
       - name: Delete docker containers
         if: always()
