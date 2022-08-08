@@ -15,13 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Create docker container
-        run: docker compose -f "docker-compose.yml" up -d --build --remove-orphans
-
+        run: |
+          docker compose -f "docker-compose.yml" up -d --build --remove-orphans
+          docker cp node_container:/node_project/results ./results
+        
       - name: "Upload Artifact"
         uses: actions/upload-artifact@v2-preview
         with:
           name: Transunion-Test-Customer-Report-Artifact
-          path: /results
+          path: ./results
 
       - name: Delete docker containers
         if: always()
