@@ -23,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Transunion-Test-Customer-Report-Artifact
-          path: results/**
+          path: ${{ github.workspace }}/results/
 
       - name: Delete docker containers
         if: always()
