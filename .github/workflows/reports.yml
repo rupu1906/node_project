@@ -23,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v2-preview
         with:
           name: Transunion-Test-Customer-Report-Artifact
-          path: ./results/Output_report.csv
+          path: Output_report.csv
 
       - name: Delete docker containers
         if: always()
