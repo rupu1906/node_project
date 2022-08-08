@@ -21,7 +21,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Transunion-Test-Customer-Report-Artifact
-          path: .node_project/results/Output_report.csv
+          path: /node_project/results/Output_report.csv
           retention-days: 5
 
       - name: Delete docker containers
