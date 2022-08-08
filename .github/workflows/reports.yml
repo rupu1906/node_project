@@ -21,7 +21,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Transunion-Test-Customer-Report-Artifact
-          path: ${{ github.workspace }}/results/Output_report.csv
+          path: ./results/Output_report.csv
           retention-days: 5
 
       - name: Delete docker containers
