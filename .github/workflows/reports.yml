@@ -18,7 +18,7 @@ jobs:
         run: docker compose -f "docker-compose.yml" up -d --build --remove-orphans
 
       - name: "Upload Artifact"
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2-preview
         with:
           name: Transunion-Test-Customer-Report-Artifact
           path: ./results/Output_report.csv
