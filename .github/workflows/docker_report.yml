@@ -3,6 +3,7 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,3 +22,6 @@ jobs:
 
       - name: Delete docker containers
         if: always()
+        run: |
+          docker compose down
+          docker system prune -f --volumes
