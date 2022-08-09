@@ -41,7 +41,7 @@ function createFile() {
     folderPath = './results/';
     shell.mkdir('-p', folderPath);
     uniqueIdentifier = Date.now();
-    filename = 'Output_report'
+    filename = 'Output_' + Date.now();
     var fields = ['FIRSTNAME', 'LASTNAME', 'DOB', 'FORMMATEDDOB', 'PHONE', 'ADDRESS', 'CITY', 'PROVINCE', 'POSTAL',
         'ADDRESS', 'CITY', 'PR.', 'POSTAL', 'APPROX FICO RISK SCORE', 'APPROX TRANSU-NION RISK',
         'APPROX FICO BANKRU-PTCY SCORE', 'APPROX FICO BR SCORE', 'SCORE0093', 'UCS', 'DESCRIPTION'];
