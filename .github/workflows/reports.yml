@@ -28,8 +28,3 @@ jobs:
           name: Transunion-Test-Customer-Report-Artifact
           path: results/**
       
-      - name: Delete docker containers
-        if: always()
-        run: |
-          docker compose down
-          docker system prune -f --volumes
